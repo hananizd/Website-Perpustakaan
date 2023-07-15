@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Admin Dashboard - Add Person</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="halamanUtama.css">
+    <script>
+    function validateEmail() {
+      var emailInput = document.getElementById("addemail");
+      var email = emailInput.value;
+      var emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+      
+      if (!emailPattern.test(email)) {
+        emailInput.setCustomValidity("Format email tidak valid");
+      } else {
+        emailInput.setCustomValidity("");
+      }
+    }
+  </script>
+
+  <script>
+    function validatePassword() {
+      var passwordInput = document.getElementById("addpass");
+      var password = passwordInput.value;
+      var passwordPattern = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/;
+      
+      if (!passwordPattern.test(password)) {
+        passwordInput.setCustomValidity("Password harus memiliki 8 karakter dengan kombinasi huruf besar, huruf kecil, dan angka");
+      } else {
+        passwordInput.setCustomValidity("");
+      }
+    }
+  </script>
+
+    <style>
+        .innerright, label {
+            color: #000;
+            font-weight:bold;
+        }
+        
+        .innerdiv {
+            text-align: center;
+            margin: 30px;
+        }
+        
+        input {
+            width: 200px;
+            padding: 5px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        
+        body {
+            background-image: url('images/gambar.jpg');
+        }
+        
+        ::placeholder {
+            color: rgb(189, 184, 184);
+            font-style: italic;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+<nav>
+    <div class="wrapper">
+        <div class="logo">
+            <img src="images/logoPerpus.jpg" alt="Logo Perpustakaan Kita" class="logo-gambar">
+            <p class="logo-text">Perpustakaan Kita</p>
+        </div>
+
+        <div class="menu">
+            <ul>
+                <li>
+                    <a href="aboutus.html"><img src="images/aboutUs.jpg" alt="About Us" class="menu-icon">About Us</a>
+                </li>
+                <li>
+                    <a href="admin_service_dashboard.php">Home</a>
+                </li>
+                <li>
+                    <a href="index.php">Logout</a>
+                </li>
+        </div>
+    </div>
+</nav>
+
+    <div class="container">
+        <div class="innerdiv">
+            <div class="rightinnerdiv">
+                <div id="addperson" class="innerright portion">
+                    <form action="addpersonserver_page.php" method="post" enctype="multipart/form-data">
+                        <label>Nama Lengkap:</label><br>
+                        <input type="text" name="addname" required><br>
+                        <label for="type">Jenis Kelamin:</label><br>
+                        <select name="jenisKelamin" required>
+                            <option value="">Pilih</option>
+                            <option value="Laki-laki">Laki-laki</option>
+                            <option value="Perempuan">Perempuan</option>
+                        </select><br>
+                        <label>Alamat:</label><br>
+                        <input type="text" name="addalamat" required><br>
+                        <label>No.Telp:</label><br>
+                        <input type="text" name="addphone" required><br>
+                        <label>Email:</label><br>
+                        <input type="text" name="addemail" required><br>
+                        <label for="type">Status:</label><br>
+                        <select name="status" required>
+                            <option value="">Pilih</option>
+                            <option value="siswa">Siswa</option>
+                            <option value="Mahasiswa">Mahasiswa</option>
+                            <option value="Guru">Guru</option>
+                            <option value="Dosen">Dosen</option>
+                            <option value="Umum">Umum</option>
+                        </select><br>
+                        <label>Instansi:</label><br>
+                        <input type="text" name="addinstansi" required><br>
+                        <label>Password:</label><br>
+                        <input type="text" name="addpass"><br>
+                        <label for="type">Choose type:</label><br>
+                        <select name="type" required>
+                            <option value="">Pilih</option>
+                            <option value="student">Student</option>
+                            <option value="teacher">Teacher</option>
+                        </select><br>
+                        <input type="submit" name="Submit" value="Daftar">
+                        <input type="reset" name="Submit2" value="Batal"><br><br>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,103 @@
+/* aboutus.css */
+
+body {
+    background-color: #FFD646;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    background-color: #333;
+    padding: 10px 0;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo-gambar {
+    width: 50px;
+    height: 50px;
+}
+
+.logo-text {
+    color: #fff;
+    margin-left: 10px;
+    font-size: 20px;
+}
+
+.menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.menu ul li {
+    margin-left: 20px;
+}
+
+.menu ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #000000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.aboutus-image {
+    display: block;
+    margin: 0 auto;
+    width: 200px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+    text-align: justify;
+    color: #555;
+}
+
+.highlight {
+    color: #FF7F00;
+}
+
+.aboutus-description {
+    color: #333; /* Warna teks utama */
+}
+
+.aboutus-description:nth-child(2) {
+    color: blue; /* Warna teks kedua */
+}
+
+.aboutus-description:nth-child(3) {
+    color: green; /* Warna teks ketiga */
+}
+
+.aboutus-description:last-child {
+    color: red; /* Warna teks terakhir */
+}
+
